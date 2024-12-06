@@ -901,7 +901,7 @@ def main():
     parser.add_argument("--semsim_type", default='sent2vec',
                         help="sent2vec or sbert")
 
-    parser.add_argument("--output_dir", default='trained/',
+    parser.add_argument("--output_dir", default='trained',
                         type=str, required=False)
 
     parser.add_argument("--init_checkpoint", default=None, type=int,
