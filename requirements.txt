@@ -1,0 +1,3 @@
+datasets
+sentence-transformers
+git+https://github.com/tagucci/pythonrouge.git
