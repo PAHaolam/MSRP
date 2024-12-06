@@ -521,13 +521,13 @@ def train(args, train_dataset, model, tokenizer) -> Tuple[int, float]:
                 st = time.time()
 
                 # Generate target summaries (sample_sents)
-                outputs = ag.generate__wrapped__(ag, input_ids=long_text,
-                                                 min_length=curminlen, max_length=curmaxlen,
-                                                 output_scores=True, do_sample=True,
-                                                 return_dict_in_generate=True,
-                                                 no_repeat_ngram_size=args.no_repeat_ngram,
-                                                 repetition_penalty=args.repeat_penalty,
-                                                 use_cache=False)
+                outputs = ag.generate.__wrapped__(ag, input_ids=long_text,
+                                                  min_length=curminlen, max_length=curmaxlen,
+                                                  output_scores=True, do_sample=True,
+                                                  return_dict_in_generate=True,
+                                                  no_repeat_ngram_size=args.no_repeat_ngram,
+                                                  repetition_penalty=args.repeat_penalty,
+                                                  use_cache=False)
 
                 sample_sents, token_logit = outputs[0], outputs[1]
 
