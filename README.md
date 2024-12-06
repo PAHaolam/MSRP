@@ -1,1 +1,1 @@
-Repository for AI+ project
+Repository for UIT.CS211 project
